@@ -14,11 +14,15 @@ class InvitationsController < ApplicationController
         flash[:notice] = "Your friends have been invited to join you on this adventure."
         redirect_to root_url
       else 
-        flash [:notice] = "Please log in to invite your friends."
+        flash[:notice] = "Something went wrong during the invitation situation."
         redirect_to root_url
       end 
     else 
       render :action => 'new'
     end   
   end
+
+  def index 
+    # view all invitations a user has sent to their contacts 
+  end 
 end
